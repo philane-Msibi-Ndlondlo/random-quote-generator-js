@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+  outline: 0;
+  border: none;
+  object-fit: cover;
+  width: 100%;
+}
+
+body {
+  background-image: url("../../assets//images/bg.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+  overflow-y: auto;
+  min-width: 350px;
+}
+body .main__container {
+  width: 90%;
+  margin: 4em auto;
+  text-align: center;
+  max-width: 800px;
+  min-width: 350px;
+  min-height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1.2em 4em;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  transition: 1s all;
+}
+@media screen and (max-width: 600px) {
+  body .main__container {
+    width: 100%;
+    margin: 0;
+  }
+}
+body .main__container .quote__img {
+  width: auto;
+  height: auto;
+  margin: 1.2em auto;
+}
+body .main__container p, body .main__container hr, body .main__container .bottom {
+  margin-bottom: 1.2em;
+}
+body .main__container p {
+  font-size: 4rem;
+  color: #364BA7;
+  font-weight: 500;
+  font-style: italic;
+  transition: 1s all;
+}
+@media screen and (max-width: 600px) {
+  body .main__container p {
+    font-size: 46px;
+  }
+}
+body .main__container hr {
+  color: rgba(54, 75, 167, 0.2);
+}
+body .main__container #quote__author {
+  color: #F583A7;
+  font-size: 3.8rem;
+}
+@media screen and (max-width: 600px) {
+  body .main__container #quote__author {
+    font-size: 1.6rem;
+  }
+}
+body .main__container #error {
+  font-size: 20px;
+  color: #ff6666;
+}
+body .main__container .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main__container .bottom #twitter__btn {
+  color: #fff;
+}
+body .main__container .bottom .btn {
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5em;
+  color: #F583A7;
+  background-color: #364BA7;
+  font-size: 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+/*# sourceMappingURL=style.css.map */

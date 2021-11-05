@@ -1,0 +1,97 @@
+@use './partials/resets';
+@use './partials/colors' as colors;
+@use './partials/base' as base;
+
+body {
+    background-image: url('../../assets//images/bg.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: base.$padding-large;
+    overflow-y: auto;
+    min-width: 350px;
+
+    .main__container {
+        width: 90%;
+        margin: base.$margin-large auto;
+        text-align: center;
+        max-width: 800px;
+        min-width: 350px;
+        min-height: 300px;
+        box-shadow: base.$box-shadow;
+        padding: base.$padding-medium base.$padding-large;
+        background-color: rgba(colors.$white, $alpha: 0.4);
+        border-radius: 8px;
+        transition: 1s all;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            margin: 0;
+        }
+
+        .quote__img {
+            width: auto;
+            height: auto;
+            margin: 1.2em auto;
+        }
+
+        p, hr, .bottom {
+           margin-bottom: 1.2em; 
+        }
+
+        p {
+            font-size: 4rem;
+            color: colors.$secondary;
+            font-weight: 500;
+            font-style: italic;
+            transition: 1s all;
+
+            @media screen and (max-width: 600px) {
+                font-size: 46px;
+            }
+        }
+
+        hr {
+            color: rgba(colors.$secondary, .2);
+        }
+
+        #quote__author {
+            color: colors.$primary;
+            font-size: 3.8rem;
+
+            @media screen and (max-width: 600px) {
+                font-size: 1.6rem;
+            }
+        }
+
+        #error {
+            font-size: 20px;
+            color: lighten(red, $amount: 20%);
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #twitter__btn { color: colors.$white; }
+
+            .btn {
+                text-align: center;
+                text-decoration: none;
+                padding: base.$padding-small;
+                color: colors.$primary;
+                background-color: colors.$secondary;
+                font-size: 24px;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: .5s all;
+            }
+        }
+    }
+}
